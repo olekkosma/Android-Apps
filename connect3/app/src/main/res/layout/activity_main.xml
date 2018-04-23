@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/background_dark"
+    tools:context="com.example.ukleja.connect3.MainActivity">
+
+    <GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="match_parent"
+        android:layout_height="360dp"
+        android:background="@drawable/grid"
+        android:columnCount="3"
+        android:rowCount="3"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true">
+
+        <ImageView
+            android:onClick="dropIn"
+            android:id="@+id/imageGreen1"
+            android:layout_width="115dp"
+            android:layout_height="115dp"
+            android:layout_above="@+id/gridLayout"
+            android:layout_alignParentStart="false"
+            android:layout_column="0"
+            android:layout_marginLeft="0dp"
+            android:layout_row="0"
+            android:tag="0"
+            android:contentDescription="" />
+
+        <ImageView
+            android:onClick="dropIn"
+            android:id="@+id/imageGreen2"
+            android:layout_width="115dp"
+            android:layout_height="115dp"
+            android:layout_above="@+id/gridLayout"
+            android:layout_alignParentStart="false"
+            android:layout_column="1"
+            android:layout_marginLeft="8dp"
+            android:layout_row="0"
+            android:contentDescription=""
+            android:tag="1"/>
+
+        <ImageView
+            android:onClick="dropIn"
+            android:id="@+id/imageGreen3"
+            android:layout_width="115dp"
+            android:layout_height="115dp"
+            android:layout_above="@+id/gridLayout"
+            android:layout_alignParentStart="false"
+            android:layout_column="2"
+            android:layout_marginLeft="8dp"
+            android:layout_row="0"
+            android:tag="2"/>
+
+        <ImageView
+            android:id="@+id/imageGreen4"
+            android:layout_width="115dp"
+            android:layout_height="115dp"
+            android:layout_above="@+id/gridLayout"
+            android:layout_alignParentStart="false"
+            android:layout_column="0"
+            android:layout_marginTop="8dp"
+            android:layout_row="1"
+            android:onClick="dropIn"
+            tools:ignore="ObsoleteLayoutParam"
+            android:tag="3"/>
+
+        <ImageView
+            android:id="@+id/imageGreen5"
+            android:layout_width="115dp"
+            android:layout_height="115dp"
+            android:layout_above="@+id/gridLayout"
+            android:layout_alignParentStart="false"
+            android:layout_column="1"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_row="1"
+            android:onClick="dropIn"
+            android:tag="4"/>
+
+        <ImageView
+            android:id="@+id/imageGreen6"
+            android:layout_width="115dp"
+            android:layout_height="115dp"
+            android:layout_above="@+id/gridLayout"
+            android:layout_alignParentStart="false"
+            android:layout_column="2"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_row="1"
+            android:onClick="dropIn"
+            android:tag="5"/>
+
+        <ImageView
+            android:onClick="dropIn"
+            android:id="@+id/imageGreen7"
+            android:layout_width="115dp"
+            android:layout_height="115dp"
+            android:layout_above="@+id/gridLayout"
+            android:layout_alignParentStart="false"
+            android:layout_column="0"
+            android:layout_marginTop="8dp"
+            android:layout_row="2"
+            android:tag="6"/>
+
+        <ImageView
+            android:onClick="dropIn"
+            android:id="@+id/imageGreen8"
+            android:layout_width="115dp"
+            android:layout_height="115dp"
+            android:layout_above="@+id/gridLayout"
+            android:layout_alignParentStart="false"
+            android:layout_column="1"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_row="2"
+            android:tag="7"/>
+
+        <ImageView
+            android:onClick="dropIn"
+            android:id="@+id/imageGreen9"
+            android:layout_width="115dp"
+            android:layout_height="115dp"
+            android:layout_above="@+id/gridLayout"
+            android:layout_alignParentStart="false"
+            android:layout_column="2"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_row="2"
+            android:tag="8"/>
+
+    </GridLayout>
+
+    <LinearLayout
+        android:id="@+id/playAgainLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"
+        android:alpha="0"
+        android:onClick="playAgainClick"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/winnerMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/resetButton"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_gravity="center_horizontal"
+            android:text="TicTacToe game!"
+            android:textColor="@android:color/background_light"
+            android:textSize="30sp" />
+
+        <Button
+            android:id="@+id/resetButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_gravity="center_horizontal"
+            android:onClick="playAgainClick"
+            android:text="Play again"
+            android:textAlignment="center" />
+    </LinearLayout>
+
+</RelativeLayout>
